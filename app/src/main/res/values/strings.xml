@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="title_home">Погода</string>
+    <string name="title_dashboard">Город</string>
+</resources>
