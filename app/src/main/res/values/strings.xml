@@ -2,4 +2,8 @@
     <string name="app_name">Weather</string>
     <string name="title_home">Погода</string>
     <string name="title_dashboard">Город</string>
+    <string name = "City"> Выберите город: </string>
+    <string name = "But"> Добавить </string>
+    <string name = "SelectIz"> Добавьте избранные города:  </string>
+    <string name = "SelectCity"> Выбрать город:  </string>
 </resources>

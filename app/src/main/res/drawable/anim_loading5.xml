@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/snow1"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/snow2"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/snow3"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/snow4"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/snow5"/>
+</animation-list>

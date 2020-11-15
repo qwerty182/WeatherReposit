@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/yasno1"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/yasno2"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/yasno3"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/yasno4"/>
+    <item
+        android:duration="3000"
+        android:drawable="@mipmap/yasno5"/>
+</animation-list>

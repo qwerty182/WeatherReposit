@@ -13,6 +13,24 @@ import com.example.weather.R
 class DashboardFragment : Fragment() {
 
     private lateinit var dashboardViewModel: DashboardViewModel
+    val CitySelect = arrayOf(
+        "Не выбрано",
+        "Москва",
+        "Санкт-Петербург",
+        "Лондон",
+        "Канада",
+        "Прага",
+        "Подольск",
+        "Берлин",
+        "Париж",
+        "Мытищи",
+        "Королев",
+        "Долгопрудный",
+        "Химки",
+        "Красногорск",
+        "Одинцово",
+        "Якутск"
+    )
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -22,7 +40,7 @@ class DashboardFragment : Fragment() {
         dashboardViewModel =
                 ViewModelProviders.of(this).get(DashboardViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_dashboard, container, false)
-        val textView: TextView = root.findViewById(R.id.text_dashboard)
+        val textView: TextView = root.findViewById(R.id.IzCity)
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
