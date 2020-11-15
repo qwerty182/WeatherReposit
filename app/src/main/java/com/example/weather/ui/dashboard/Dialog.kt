@@ -2,12 +2,20 @@ package com.example.weather.ui.dashboard
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.DialogFragment
+import com.example.weather.MainActivity
+import com.example.weather.ui.home.HomeFragment
 
 class Dialog : DialogFragment(){
-    val checkItems = BooleanArray(15, {false})
+    val checkItems = BooleanArray(31, {false})
+    var shared = activity?.getSharedPreferences(MainActivity().PREF_NAME, Context.MODE_PRIVATE)
+    val editor = shared?.edit()
+
 
     override fun onCreateDialog(savedInstanceState: Bundle?) : Dialog {
 
@@ -36,6 +44,11 @@ class Dialog : DialogFragment(){
                             citys[count] = i.toString()
                             count++
                         }
+                    }
+
+                    for (i in 0..DashboardFragment().CitySelect.size - 1){
+                        editor?.putString(MainActivity().SELECT_CITY + i.toString(), DashboardFragment().CitySelect[i])
+                        var t =  shared?.getString(MainActivity().SELECT_CITY + i.toString(), "Ошибка")
                     }
                 }
                 .setNegativeButton("Отмена"){
