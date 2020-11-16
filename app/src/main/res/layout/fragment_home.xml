@@ -7,7 +7,7 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/OsnovText"
         style="@style/Text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,14 +49,13 @@
         android:id="@+id/SelectSpinner"
         android:layout_width="194dp"
         android:layout_height="38dp"
-        android:spinnerMode="dialog"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.011" />
+        app:layout_constraintVertical_bias="0.011"
+        android:spinnerMode="dialog"/>
 
     <ImageView
         android:id="@+id/image_id"

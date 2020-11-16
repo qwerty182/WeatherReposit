@@ -41,15 +41,15 @@ class Dialog : DialogFragment(){
                     count = 0
                     for(i in DashboardFragment().CitySelect.indices){
                         if(checkItems[i]){
-                            citys[count] = i.toString()
+                            citys[count] = DashboardFragment().CitySelect[i].toString()
                             count++
                         }
                     }
-
-                    for (i in 0..DashboardFragment().CitySelect.size - 1){
-                        editor?.putString(MainActivity().SELECT_CITY + i.toString(), DashboardFragment().CitySelect[i])
-                        var t =  shared?.getString(MainActivity().SELECT_CITY + i.toString(), "Ошибка")
+                    editor?.putInt(MainActivity().FAVORITES_SIZE, citys.size)
+                    for (i in 0..(citys.size - 1)){
+                        editor?.putString(MainActivity().FAVORITES_+i.toString(), citys[i].toString())
                     }
+                    editor?.apply()
                 }
                 .setNegativeButton("Отмена"){
                         dialog, _ -> dialog.cancel()
